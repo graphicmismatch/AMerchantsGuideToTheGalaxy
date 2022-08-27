@@ -56,4 +56,8 @@ public class Data : MonoBehaviour
     {
         return currplanet;
     }
+    public static int getDay()
+    {
+        return days;
+    }
 }
