@@ -16,7 +16,7 @@ public class WorldGen : MonoBehaviour
     void Start()
     {
         trees = new List<Vector2Int>();
-        setSeed("Joe Mama", 3);
+        setSeed(Data.getSeed(), Data.getPlanet());
         spawnGround();
         spawnDecorations();
         spawnBuildings();
@@ -116,9 +116,9 @@ public class WorldGen : MonoBehaviour
 
 
     }
-    public void setSeed(string s, int o = 0)
+    public void setSeed(int s, int o = 0)
     {
-        int hash = s.GetHashCode();
+        int hash = s;
         hash += o;
         Random.InitState(hash);
     }

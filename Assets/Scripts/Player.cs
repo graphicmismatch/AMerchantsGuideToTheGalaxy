@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     Rigidbody2D body;
@@ -21,13 +19,25 @@ public class Player : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+        if (SceneManager.GetActiveScene().name == "SpaceScene")
+        {
+            anim.SetBool("rocket mode", true);
+        }
+        else
+        {
+            anim.SetBool("rocket mode", false);
+        }
     }
 
     private void FixedUpdate()
     {
-        body.velocity = new Vector2(horizontal * runSpeed*Time.deltaTime, vertical * runSpeed* Time.deltaTime);
+        body.velocity = new Vector2(horizontal * runSpeed * Time.deltaTime, vertical * runSpeed * Time.deltaTime);
         anim.SetFloat("xv", horizontal);
         anim.SetFloat("yv", vertical);
-        anim.SetFloat("v",Mathf.Abs(horizontal*10) + Mathf.Abs(vertical*10));
+        anim.SetFloat("v", Mathf.Abs(horizontal * 10) + Mathf.Abs(vertical * 10));
+        if (anim.GetBool("rocket mode"))
+        {
+           
+        }
     }
 }
