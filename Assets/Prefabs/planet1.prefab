@@ -115,3 +115,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetno: 0
+  snd: {fileID: 8300000, guid: 21efc210939ef29459651df6f499bf21, type: 3}

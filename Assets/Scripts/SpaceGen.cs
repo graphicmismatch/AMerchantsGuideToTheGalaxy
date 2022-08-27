@@ -16,7 +16,6 @@ public class SpaceGen : MonoBehaviour
     {
         
         Random.InitState(Data.getSeed()); 
-        Data.setPlanet(-1);
 
         for (int i = 0; i < 10; i++)
         {

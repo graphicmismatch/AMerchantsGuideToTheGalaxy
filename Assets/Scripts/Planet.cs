@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class Planet : MonoBehaviour
 {
     public int planetno;
-
+    public AudioClip snd;
 
     private void Start()
     {
@@ -20,6 +20,7 @@ public class Planet : MonoBehaviour
             if (Input.GetKey(KeyCode.Return))
             {
                 Data.setPlanet(planetno);
+                AudioSource.PlayClipAtPoint(snd, this.transform.position);
                 SceneManager.LoadScene("PlanetScene");
             }
         }
