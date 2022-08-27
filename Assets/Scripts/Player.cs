@@ -35,9 +35,5 @@ public class Player : MonoBehaviour
         anim.SetFloat("xv", horizontal);
         anim.SetFloat("yv", vertical);
         anim.SetFloat("v", Mathf.Abs(horizontal * 10) + Mathf.Abs(vertical * 10));
-        if (anim.GetBool("rocket mode"))
-        {
-           
-        }
     }
 }

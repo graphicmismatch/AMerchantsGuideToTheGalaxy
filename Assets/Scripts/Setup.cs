@@ -10,7 +10,7 @@ public class Setup : MonoBehaviour
     void Start()
     {
         unhashedseed = ((Mathf.RoundToInt(System.DateTime.UtcNow.ToFileTimeUtc()) + (Random.Range(-10000, 10000))) + "");
-        seedbox.text = unhashedseed.GetHashCode() + "";
+        seedbox.text = unhashedseed + "";
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class Setup : MonoBehaviour
     }
     public void startgame()
     {
-        Data.setSeed(unhashedseed);
+        Data.setSeed(seedbox.text);
         
     }
 }

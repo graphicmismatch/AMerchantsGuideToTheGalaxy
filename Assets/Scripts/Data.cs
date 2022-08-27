@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Data : MonoBehaviour
 {
     static int seed;
-    static int currplanet;
+    static int currplanet = -1;
     private void Awake()
     {
         DontDestroyOnLoad(this);
+    }
+    private void Update()
+    {
     }
     public static void setSeed(int s)
     {
