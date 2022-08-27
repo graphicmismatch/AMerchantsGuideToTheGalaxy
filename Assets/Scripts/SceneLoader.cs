@@ -72,7 +72,7 @@ public class SceneLoader : MonoBehaviour
         Scene curScene = SceneManager.GetActiveScene();
         while (gameScene.progress < 0.9f)
         { 
-           loader.fillAmount = gameScene.progress +0.1f;
+            loader.fillAmount = gameScene.progress +0.1f;
             yield return new WaitForEndOfFrame();
         }
         loader.fillAmount = gameScene.progress + 0.1f;

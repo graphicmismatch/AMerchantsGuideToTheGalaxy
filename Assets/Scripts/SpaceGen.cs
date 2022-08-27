@@ -32,7 +32,7 @@ public class SpaceGen : MonoBehaviour
         var d = 0;
         foreach (GameObject t in spp)
         {
-            if (Vector2.Distance(spp[0].transform.position, t.transform.position) > d)
+            if (Mathf.Abs(Vector2.Distance(spp[0].transform.position, t.transform.position)) > d)
             {
                 go = spp.IndexOf(t);
                
