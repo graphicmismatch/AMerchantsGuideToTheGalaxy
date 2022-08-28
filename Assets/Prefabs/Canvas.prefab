@@ -3620,6 +3620,18 @@ MonoBehaviour:
   - id: 1
     itemName: Water
     color: {r: 0.042719822, g: 0.3430681, b: 0.6037736, a: 0}
+    weight: 1
+  - id: 2
+    itemName: Clay
+    color: {r: 0.21698111, g: 0.117377184, b: 0.046057317, a: 0}
+    weight: 5
+  - id: 2
+    itemName: Wood
+    color: {r: 0.5551398, g: 0.7169812, b: 0.091313645, a: 0}
+    weight: 3
+  - id: 2
+    itemName: Sulfur
+    color: {r: 0.8207547, g: 0.31371945, b: 0.112273075, a: 0}
     weight: 2
   weight: 0
   maxWeight: 100

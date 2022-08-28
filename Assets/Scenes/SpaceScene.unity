@@ -744,6 +744,86 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[2].id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[3].id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[4].id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[1].weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[2].weight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[3].weight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[4].weight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[2].color.b
+      value: 0.046057317
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[2].color.g
+      value: 0.117377184
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[2].color.r
+      value: 0.21698111
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[3].color.b
+      value: 0.091313645
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[3].color.g
+      value: 0.7169812
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[3].color.r
+      value: 0.5551398
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[4].color.b
+      value: 0.112273075
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[4].color.g
+      value: 0.31371945
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[4].color.r
+      value: 0.8207547
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[2].itemName
+      value: Clay
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[3].itemName
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: items.Array.data[4].itemName
+      value: Sulfur
+      objectReference: {fileID: 0}
     - target: {fileID: 3031654116727811783, guid: a391530d0e203d444bd4dc5351814471, type: 3}
       propertyPath: m_Name
       value: Canvas
