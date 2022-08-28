@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     Rigidbody2D body;
+    public Collider2D coll;
     Animator anim;
     float horizontal;
     float vertical;
@@ -29,7 +30,7 @@ public class Player : MonoBehaviour
             {
                 anim.SetBool("rocket mode", true);
             }
-            else if (inv.fuel <= 0)
+            else if (inv.fuel <= 0 && !coll.IsTouchingLayers(LayerMask.GetMask("planets")))
             {
                 SceneManager.LoadScene("LoseScene");
             }
@@ -38,7 +39,15 @@ public class Player : MonoBehaviour
         {
             anim.SetBool("rocket mode", false);
         }
-    }
+
+        if (SceneManager.GetActiveScene().name == "PlanetScene")
+        {
+            if (inv.getweight() == 0 && inv.CheckMoney(0) && inv.fuel ==0)
+            {
+                SceneManager.LoadScene("LoseScene");
+            }
+        }
+        }
 
     private void FixedUpdate()
     {

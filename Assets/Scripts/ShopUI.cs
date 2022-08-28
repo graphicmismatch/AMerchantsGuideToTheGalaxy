@@ -9,7 +9,7 @@ public class ShopUI : MonoBehaviour
     public Inventory inv;
     public Transform Spawn, Spawn2;
     public GameObject SellButton, shop;
-
+    public AudioClip buy;
     private void Start()
     {
         inv = GetComponent<Inventory>();
@@ -58,6 +58,8 @@ public class ShopUI : MonoBehaviour
                 inv.ChangeAmount(item, amount);
                 inv.changeMoney(-price);
             }
+            inv.changeMoney(-price);
+            AudioSource.PlayClipAtPoint(buy, shop.transform.position);
         }
     }
     public void TrySell(Item item, float price, int amount)

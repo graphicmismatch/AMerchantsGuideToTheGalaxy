@@ -25,6 +25,18 @@ public class Planet : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            if (Input.GetKey(KeyCode.Return))
+            {
+                Data.setPlanet(planetno);
+                AudioSource.PlayClipAtPoint(snd, this.transform.position);
+                SceneManager.LoadScene("PlanetScene");
+            }
+        }
+    }
 
     public void setSeed(int s, int o = 0)
     {
