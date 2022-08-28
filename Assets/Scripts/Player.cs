@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+
         if (SceneManager.GetActiveScene().name == "SpaceScene")
         {
             anim.SetBool("rocket mode", true);
@@ -35,5 +36,13 @@ public class Player : MonoBehaviour
         anim.SetFloat("xv", horizontal);
         anim.SetFloat("yv", vertical);
         anim.SetFloat("v", Mathf.Abs(horizontal * 10) + Mathf.Abs(vertical * 10));
+
+        if (SceneManager.GetActiveScene().name == "SpaceScene")
+        {
+            if (body.velocity.magnitude > 0.1)
+            {
+                FindObjectOfType<Inventory>().changeFuel(Time.deltaTime * -1);
+            }
+        }
     }
 }
