@@ -28,13 +28,13 @@ public class SpaceGen : MonoBehaviour
             spp.Add(a);
         }
         int go = -1;
-        var d = 0;
+        float d = 0;
         foreach (GameObject t in spp)
         {
             if (Mathf.Abs(Vector2.Distance(spp[0].transform.position, t.transform.position)) > d)
             {
                 go = spp.IndexOf(t);
-               
+                d = Mathf.Abs(Vector2.Distance(spp[0].transform.position, t.transform.position));
             }
         }
         GameObject temp = spp[go];
