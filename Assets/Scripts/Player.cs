@@ -6,23 +6,28 @@ public class Player : MonoBehaviour
     Animator anim;
     float horizontal;
     float vertical;
+    Inventory inv;
 
     public float runSpeed = 20.0f;
 
     void Start()
     {
+        inv = FindObjectOfType<Inventory>();
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
+            horizontal = Input.GetAxisRaw("Horizontal");
+            vertical = Input.GetAxisRaw("Vertical");
 
         if (SceneManager.GetActiveScene().name == "SpaceScene")
         {
-            anim.SetBool("rocket mode", true);
+            if (inv.fuel > 0)
+            {
+                anim.SetBool("rocket mode", true);
+            }
         }
         else
         {
@@ -39,9 +44,12 @@ public class Player : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "SpaceScene")
         {
-            if (body.velocity.magnitude > 0.1)
+            if (inv.fuel > 0)
             {
-                FindObjectOfType<Inventory>().changeFuel(Time.deltaTime * -1);
+                if (body.velocity.magnitude > 0.1)
+                {
+                    inv.changeFuel(Time.deltaTime * -1);
+                }
             }
         }
     }

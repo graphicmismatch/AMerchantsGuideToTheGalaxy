@@ -3625,7 +3625,7 @@ MonoBehaviour:
   maxWeight: 100
   fuel: 100
   maxfuel: 100
-  modifier: 20
+  modifier: 5
   money: 100
 --- !u!114 &8266993652495678311
 MonoBehaviour:
@@ -7174,7 +7174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5902363758336525152
 RectTransform:
   m_ObjectHideFlags: 0

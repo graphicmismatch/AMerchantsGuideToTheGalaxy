@@ -19,7 +19,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] GameObject slots;
     [SerializeField] TextMeshProUGUI moneyUI, fuelUI, weightUI;
     [SerializeField] List<Item> items;
-    [SerializeField] float weight = 0, maxWeight = 100,
+    public float weight = 0, maxWeight = 100,
         fuel = 0, maxfuel = 100, modifier = 20;
     [SerializeField] float money = 100;
     Dictionary<string, int> stored = new Dictionary<string, int>();
