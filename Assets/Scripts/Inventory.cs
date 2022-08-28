@@ -42,6 +42,14 @@ public class Inventory : MonoBehaviour
     public bool CheckInventory(Item item, int amount)
     {
         float val = weight + item.weight * amount;
+        if (amount < 0)
+        {
+            if (stored.ContainsKey(item.itemName) == false)
+            {
+                return false;
+            }
+        }
+
         if (val <= maxWeight && val >= 0)
         {
             return true;
@@ -52,6 +60,11 @@ public class Inventory : MonoBehaviour
     public bool CheckMoney(float amount)
     {
         return money >= amount;
+    }
+
+    public bool CheckFuel(float amount)
+    {
+        return maxfuel >= fuel + amount;
     }
 
     void SetUI()
