@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Item
@@ -35,6 +36,15 @@ public class Inventory : MonoBehaviour
         }
         else if(inst != this)
         {
+            Destroy(this.gameObject);
+        }
+    }
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "WinScene" || SceneManager.GetActiveScene().name == "LoseScene"
+            || SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            inst = null;
             Destroy(this.gameObject);
         }
     }

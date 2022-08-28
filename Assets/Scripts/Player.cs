@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     float horizontal;
     float vertical;
     Inventory inv;
+    bool lost;
 
     public float runSpeed = 20.0f;
 
@@ -27,6 +28,10 @@ public class Player : MonoBehaviour
             if (inv.fuel > 0)
             {
                 anim.SetBool("rocket mode", true);
+            }
+            else if (inv.fuel <= 0)
+            {
+                SceneManager.LoadScene("LoseScene");
             }
         }
         else
