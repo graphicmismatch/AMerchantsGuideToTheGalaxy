@@ -32,7 +32,7 @@ public class Shop : MonoBehaviour
                 int rng = Random.Range(1, 10);
                 float rng2 = Random.Range(0.5f, 1.5f);
                 ui.SpawnBuyObj(items[i], (prices[i] * rng) * rng2, rng);
-                ui.SpawnSellObj(items[i], (prices[i] * rng) * rng2 * 2/3, rng);
+                ui.SpawnSellObj(items[i], (prices[i]) * rng2 * 2/3);
             }
         }
     }

@@ -33,17 +33,17 @@ public class ShopUI : MonoBehaviour
             item.itemName + " X " + Mathf.Abs(amount) + " : " + Mathf.Abs(price).ToString("#.00") + "$";
         ButtonPre.onClick.AddListener(delegate { TryBuy(item,price,amount); });
     }
-    public void SpawnSellObj(Item item, float price,int amount)
+    public void SpawnSellObj(Item item, float price)
     {
         Button ButtonPre = Instantiate(SellButton, Spawn2).GetComponent<Button>();
         ButtonPre.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text =
-            item.itemName + " X " + Mathf.Abs(amount) + " : " + Mathf.Abs(price).ToString("#.00") + "$";
-        ButtonPre.onClick.AddListener(delegate { TrySell(item, price, amount); });
+            item.itemName + " X 1" + " : " + Mathf.Abs(price).ToString("#.00") + "$";
+        ButtonPre.onClick.AddListener(delegate { TrySell(item, price); });
     }
 
     public void TryBuy(Item item, float price, int amount)
     {
-        if (inv.CheckMoney(-price))
+        if (inv.CheckMoney(price))
         {
             if (item.itemName == "Fuel")
             {
@@ -58,15 +58,14 @@ public class ShopUI : MonoBehaviour
                 inv.ChangeAmount(item, amount);
                 inv.changeMoney(-price);
             }
-            inv.changeMoney(-price);
             AudioSource.PlayClipAtPoint(buy, shop.transform.position);
         }
     }
-    public void TrySell(Item item, float price, int amount)
+    public void TrySell(Item item, float price)
     {
-        if (inv.CheckInventory(item, -amount))
+        if (inv.CheckInventory(item, -1))
         {
-            inv.ChangeAmount(item, -amount);
+            inv.ChangeAmount(item, -1);
             inv.changeMoney(price);
         }
     }
