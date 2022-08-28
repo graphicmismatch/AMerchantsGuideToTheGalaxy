@@ -77,6 +77,10 @@ public class Inventory : MonoBehaviour
         return maxfuel >= fuel + amount;
     }
 
+    public float getweight()
+    {
+        return weight;
+    }
     void SetUI()
     {
         moneyUI.text = "Money : " + money.ToString("#.00") + "$";
