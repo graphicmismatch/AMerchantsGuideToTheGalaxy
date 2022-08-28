@@ -19,7 +19,7 @@ public class Inventory : MonoBehaviour
     static Inventory inst;
     [SerializeField] GameObject slots;
     [SerializeField] TextMeshProUGUI moneyUI, fuelUI, weightUI;
-    [SerializeField] List<Item> items;
+    public List<Item> items;
     public float weight = 0, maxWeight = 100,
         fuel = 0, maxfuel = 100, modifier = 20;
     [SerializeField] float money = 100;
@@ -82,13 +82,10 @@ public class Inventory : MonoBehaviour
         moneyUI.text = "Money : " + money.ToString("#.00") + "$";
         fuelUI.text = "Fuel : " + fuel.ToString("#.00") + "%";
         weightUI.text = "Weight : " + weight + " / " + maxWeight;
-        Debug.Log(stored.ElementAt(0).Key);
         for(int i = 0; i < slots.transform.childCount; i++)
         {
             TextMeshProUGUI tmptext = slots.transform.GetChild(i).GetChild(0)
                    .GetComponent<TextMeshProUGUI>();
-
-            Debug.Log(tmptext.name);
 
             tmptext.text = "Empty";
             if (i < stored.ToArray().Length)

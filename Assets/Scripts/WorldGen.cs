@@ -12,9 +12,12 @@ public class WorldGen : MonoBehaviour
     public GameObject shop;
     public GameObject fuelshop;
     private List<Vector2Int> trees;
+
+    public List<Item> planetItems = new List<Item>() {};
     // Start is called before the first frame update
     void Start()
     {
+        GetItems();
         trees = new List<Vector2Int>();
         setSeed(Data.getSeed(), Data.getPlanet());
         spawnGround();
@@ -26,6 +29,19 @@ public class WorldGen : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void GetItems()
+    {
+        Inventory inv = FindObjectOfType<Inventory>();
+        List<Item> tmp = new List<Item>();
+        tmp.AddRange(inv.items);
+        for (int i = 0; i< 4; i++)
+        {
+            Item tmpitem = tmp[Random.Range(0, tmp.Count)];
+            planetItems.Add(tmpitem);
+            tmp.Remove(tmpitem);
+        }
     }
     void spawnGround()
     {
@@ -88,7 +104,7 @@ public class WorldGen : MonoBehaviour
         {
             float tx = Random.Range(0f, x);
             float ty = Random.Range(0f, y);
-            Instantiate(shop, new Vector2(tx, ty), Quaternion.identity);
+            Instantiate(shop, new Vector2(tx, ty), Quaternion.identity).GetComponent<Shop>().SetVal(planetItems);
             foreach (Vector2Int pos in trees)
             {
                 if (Vector2.Distance(new Vector2(tx, ty), (Vector2)pos) <= 5)

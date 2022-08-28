@@ -5,19 +5,29 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     public List<Item> items;
-    public float[] prices;
+    public List<float> prices;
+    ShopUI ui;
     private void Start()
     {
+        float basePrice = Random.Range(1, 5); 
+        for(int i = 0; i < 4; i++)
+        {
+            prices.Add(basePrice);
+            basePrice += Random.Range(basePrice, basePrice * 10);
+        }
     }
 
+    public void SetVal(List<Item> items)
+    {
+        this.items = items;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            ShopUI ui = FindObjectOfType<ShopUI>();
+            ui = FindObjectOfType<ShopUI>();
             ui.Refresh();
-            
-            for(int i = 0; i < items.Count; i++)
+            for (int i = 0; i < items.Count; i++)
             {
                 int rng = Random.Range(1, 10);
                 float rng2 = Random.Range(0.5f, 1.5f);
@@ -30,7 +40,6 @@ public class Shop : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            ShopUI ui = FindObjectOfType<ShopUI>();
             ui.shop.SetActive(false);
         }
     }

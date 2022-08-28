@@ -43,26 +43,28 @@ public class ShopUI : MonoBehaviour
 
     public void TryBuy(Item item, float price, int amount)
     {
-        if (inv.CheckMoney(price))
+        if (inv.CheckMoney(-price))
         {
             if (item.itemName == "Fuel")
             {
                 if (inv.CheckFuel(amount))
                 {
                     inv.changeFuel(amount);
+                    inv.changeMoney(-price);
                 }
             }
             else if (inv.CheckInventory(item,amount))
             {
                 inv.ChangeAmount(item, amount);
+                inv.changeMoney(-price);
             }
         }
     }
     public void TrySell(Item item, float price, int amount)
     {
-        if (inv.CheckInventory(item, amount))
+        if (inv.CheckInventory(item, -amount))
         {
-            inv.ChangeAmount(item, amount);
+            inv.ChangeAmount(item, -amount);
             inv.changeMoney(price);
         }
     }
