@@ -6,6 +6,7 @@ public class Shop : MonoBehaviour
 {
     public List<Item> items;
     public float[] prices;
+
     private void Start()
     {
     }
