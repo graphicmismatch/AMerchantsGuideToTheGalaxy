@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
             {
                 anim.SetBool("rocket mode", true);
             }
-            else if (inv.fuel <= 0 && !coll.IsTouchingLayers(LayerMask.GetMask("planets")))
+            else if (inv.fuel <= 0)
             {
                 SceneManager.LoadScene("LoseScene");
             }
@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
             {
                 if (body.velocity.magnitude > 0.1)
                 {
-                    inv.changeFuel(Time.deltaTime * -1);
+                    inv.changeFuel(Time.deltaTime * -3);
                 }
             }
         }

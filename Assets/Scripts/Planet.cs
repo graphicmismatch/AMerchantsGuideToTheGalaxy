@@ -6,37 +6,43 @@ public class Planet : MonoBehaviour
 {
     public int planetno;
     public AudioClip snd;
-
+    private bool coll = false;
+    private bool c = true;
+    private float t = 0.1f;
     private void Start()
     {
         setSeed(Data.getSeed(), planetno);
         Color color = Color.HSVToRGB(Random.Range(0f, 1f), 0.27f, 0.93f);
         this.GetComponent<SpriteRenderer>().color = color;
+        c = true;
+        t = 0.1f;
     }
-    private void OnTriggerStay2D(Collider2D collision)
+
+    private void Update()
     {
-        if (collision.tag == "Player")
+        t -= Time.deltaTime;
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(gameObject.transform.position, GetComponent<CircleCollider2D>().radius);
+        bool f = false;
+        if (c)
         {
-            if (Input.GetKey(KeyCode.Return))
+            foreach (Collider2D c in hitColliders)
             {
-                Data.setPlanet(planetno);
-                AudioSource.PlayClipAtPoint(snd, this.transform.position);
-                SceneManager.LoadScene("PlanetScene");
+                if (c.tag == "Player")
+                { f = true; }
             }
+            coll = f;
+        }
+
+        if (Input.GetKey(KeyCode.Return) && coll && t<0)
+        {
+            coll = false;
+            c = false;
+            Data.setPlanet(planetno);
+            AudioSource.PlayClipAtPoint(snd, this.transform.position);
+            SceneManager.LoadScene("PlanetScene");
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            if (Input.GetKey(KeyCode.Return))
-            {
-                Data.setPlanet(planetno);
-                AudioSource.PlayClipAtPoint(snd, this.transform.position);
-                SceneManager.LoadScene("PlanetScene");
-            }
-        }
-    }
+
 
     public void setSeed(int s, int o = 0)
     {

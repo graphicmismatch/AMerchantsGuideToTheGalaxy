@@ -21,7 +21,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] TextMeshProUGUI moneyUI, fuelUI, weightUI;
     public List<Item> items;
     public float weight = 0, maxWeight = 100,
-        fuel = 0, maxfuel = 100, modifier = 20;
+        fuel = 0, maxfuel = 10000, modifier = 20;
     [SerializeField] float money = 100;
     Dictionary<string, int> stored = new Dictionary<string, int>();
 

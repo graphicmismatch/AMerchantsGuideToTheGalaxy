@@ -3656,6 +3656,7 @@ MonoBehaviour:
   Spawn2: {fileID: 5902363758336525152}
   SellButton: {fileID: 531643930806400568, guid: 74b4d45ce227f66438985611a47e0dce, type: 3}
   shop: {fileID: 4718541920792026892}
+  buy: {fileID: 8300000, guid: 261f5b538fcc5bb4f86a225a2c404c04, type: 3}
 --- !u!1 &3031654116738470951
 GameObject:
   m_ObjectHideFlags: 0
