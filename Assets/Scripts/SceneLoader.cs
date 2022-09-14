@@ -22,7 +22,11 @@ public class SceneLoader : MonoBehaviour
                 LoadScene();
         }
     }
-
+    public void skiptime()
+    {
+        iswaiting = true;
+        timer = 0;
+    }
     public void LoadScene()
     {
         bool canLoad = true;

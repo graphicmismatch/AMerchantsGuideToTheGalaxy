@@ -130,33 +130,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8835783004460837717, guid: 1609795069328f240944216ba1abc0a3, type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8835783004460837717, guid: 1609795069328f240944216ba1abc0a3, type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8835783004460837717, guid: 1609795069328f240944216ba1abc0a3, type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8835783004460837802, guid: 1609795069328f240944216ba1abc0a3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8835783004460837802, guid: 1609795069328f240944216ba1abc0a3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8835783006079387432, guid: 1609795069328f240944216ba1abc0a3, type: 3}
       propertyPath: m_Name
       value: player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8835783006079387432, guid: 1609795069328f240944216ba1abc0a3, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8835783006079387437, guid: 1609795069328f240944216ba1abc0a3, type: 3}
       propertyPath: m_RootOrder
@@ -723,6 +699,10 @@ PrefabInstance:
     - target: {fileID: 3031654116619105117, guid: a391530d0e203d444bd4dc5351814471, type: 3}
       propertyPath: m_characterSpacing
       value: -11.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
+      propertyPath: maxfuel
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3031654116727811783, guid: a391530d0e203d444bd4dc5351814471, type: 3}
       propertyPath: m_Name

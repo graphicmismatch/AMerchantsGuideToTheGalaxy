@@ -39,7 +39,7 @@ public class Planet : MonoBehaviour
             c = false;
             Data.setPlanet(planetno);
             AudioSource.PlayClipAtPoint(snd, this.transform.position);
-            SceneManager.LoadScene("PlanetScene");
+            SceneManager.LoadScene("CutSceneLanding");
         }
     }
 

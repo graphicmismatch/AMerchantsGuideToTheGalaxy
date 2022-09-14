@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WinScene.unity
     guid: a1b45380711eb21408ccbc475d278e69
+  - enabled: 1
+    path: Assets/Scenes/CutSceneLanding.unity
+    guid: 20d17a5eb1b353d4ea86b19f11c8420e
   m_configObjects: {}

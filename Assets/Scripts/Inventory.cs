@@ -38,6 +38,7 @@ public class Inventory : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        //maxfuel = 10000;
     }
     private void Update()
     {
