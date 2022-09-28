@@ -7,8 +7,13 @@ public class Shop : MonoBehaviour
     public List<Item> items;
     public List<float> prices;
     ShopUI ui;
+
+    private bool inrange;
+    private bool isactive;
     private void Start()
     {
+        inrange = false;
+        isactive = false;
         float basePrice = Random.Range(1, 5); 
         for(int i = 0; i < 4; i++)
         {
@@ -17,6 +22,18 @@ public class Shop : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (inrange && Input.GetKeyDown(KeyCode.E) && !isactive)
+        {
+            show();
+        }
+        else if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Escape)) && isactive)
+        {
+            ui.shop.SetActive(false);
+            isactive = false;
+        }
+    }
     public void SetVal(List<Item> items)
     {
         this.items = items;
@@ -25,22 +42,41 @@ public class Shop : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            ui = FindObjectOfType<ShopUI>();
-            ui.Refresh();
-            for (int i = 0; i < items.Count; i++)
-            {
-                int rng = Random.Range(1, 10);
-                float rng2 = Random.Range(0.5f, 1.5f);
-                ui.SpawnBuyObj(items[i], (prices[i] * rng) * rng2, rng);
-                ui.SpawnSellObj(items[i], (prices[i]) * rng2 * 2/3);
-            }
+            inrange = true;
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            inrange = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            ui.shop.SetActive(false);
+            inrange = false;
+            inrange = false;
+            if (isactive)
+            {
+                isactive = false;
+                ui.shop.SetActive(false);
+            }
         }
     }
+    private void show()
+    {
+        isactive = true;
+        ui = FindObjectOfType<ShopUI>(true);
+        ui.Refresh();
+        for (int i = 0; i < items.Count; i++)
+        {
+            int rng = Random.Range(1, 10);
+            float rng2 = Random.Range(0.5f, 1.5f);
+            ui.SpawnBuyObj(items[i], (prices[i] * rng) * rng2, rng);
+            ui.SpawnSellObj(items[i], (prices[i]) * rng2 * 2 / 3);
+        }
+    }
+
 }

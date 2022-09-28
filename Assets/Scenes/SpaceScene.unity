@@ -688,22 +688,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3031654116619105117, guid: a391530d0e203d444bd4dc5351814471, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: b23951323bc53fa49a810a9980aaded7, type: 2}
-    - target: {fileID: 3031654116619105117, guid: a391530d0e203d444bd4dc5351814471, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -6424070078777604895, guid: b23951323bc53fa49a810a9980aaded7, type: 2}
-    - target: {fileID: 3031654116619105117, guid: a391530d0e203d444bd4dc5351814471, type: 3}
-      propertyPath: m_characterSpacing
-      value: -11.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 3031654116727811780, guid: a391530d0e203d444bd4dc5351814471, type: 3}
-      propertyPath: maxfuel
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 3031654116727811783, guid: a391530d0e203d444bd4dc5351814471, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -791,30 +775,6 @@ PrefabInstance:
     - target: {fileID: 3031654116727811832, guid: a391530d0e203d444bd4dc5351814471, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3031654116773669718, guid: a391530d0e203d444bd4dc5351814471, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: b23951323bc53fa49a810a9980aaded7, type: 2}
-    - target: {fileID: 3031654116773669718, guid: a391530d0e203d444bd4dc5351814471, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -6424070078777604895, guid: b23951323bc53fa49a810a9980aaded7, type: 2}
-    - target: {fileID: 3031654116773669718, guid: a391530d0e203d444bd4dc5351814471, type: 3}
-      propertyPath: m_characterSpacing
-      value: -11.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 3031654117270107735, guid: a391530d0e203d444bd4dc5351814471, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: b23951323bc53fa49a810a9980aaded7, type: 2}
-    - target: {fileID: 3031654117270107735, guid: a391530d0e203d444bd4dc5351814471, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -6424070078777604895, guid: b23951323bc53fa49a810a9980aaded7, type: 2}
-    - target: {fileID: 3031654117270107735, guid: a391530d0e203d444bd4dc5351814471, type: 3}
-      propertyPath: m_characterSpacing
-      value: -11.23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a391530d0e203d444bd4dc5351814471, type: 3}
