@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 4611510233666109326}
+  offset: -0.1
 --- !u!58 &4611510233666109322
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -176,3 +177,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78e2fb59f18ed2a408c65326992e13e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
+  prices: []
